@@ -7,6 +7,7 @@ namespace ssrt
         private static string buildVersion = System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
         public static void CarregarDriversDeComando(string[] args)
         {
+            var msgHelp = "Digite -h|--help para ajuda.";
             for (int i = 0; i < args.Length; i++)
             {
                 switch (args[i])
@@ -21,9 +22,13 @@ namespace ssrt
                         MenuAjuda(true);
                         break;
                     default:
-                        Console.WriteLine("Digite -h|--help para ajuda.");
+                        Console.WriteLine(msgHelp);
                         break;
                 }
+            }
+            if (args.Length == 0)
+            {
+                Console.WriteLine(msgHelp);
             }
         }
 
