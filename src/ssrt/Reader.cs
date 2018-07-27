@@ -42,7 +42,7 @@ namespace ssrt
                                 sb.AppendLine(line);
                                 while ((line = sr.ReadLine()) != null)
                                 {
-                                    if (String.IsNullOrEmpty(line))
+                                    if (String.IsNullOrEmpty(line)|| String.IsNullOrWhiteSpace(line))
                                     {
                                         lineCount++;
                                     }
@@ -72,7 +72,7 @@ namespace ssrt
                 {
                     Recorder.PersistirArquivo(arquivo, sb);
                 }
-                Console.WriteLine($"Espaços Removidos:{lineCount}.");
+                Console.WriteLine($"Espaços Removidos:{lineCount}");
             }
         }
     }
