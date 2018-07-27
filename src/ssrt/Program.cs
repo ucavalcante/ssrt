@@ -6,7 +6,7 @@ namespace ssrt
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CommandDriver.CarregarDriversDeComando(args);
         }
     }
 }
