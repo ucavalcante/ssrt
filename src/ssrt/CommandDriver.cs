@@ -15,6 +15,12 @@ namespace ssrt
                     case ".":
                         Reader.Executar(Environment.CurrentDirectory);
                         break;
+                    case "-d":
+                        if (args.Length >= i++)
+                        {
+                            Reader.Executar(args[i++]);
+                        }
+                        break;
                     case "-h":
                         MenuAjuda(false);
                         break;
@@ -32,11 +38,16 @@ namespace ssrt
             }
         }
 
-        private static void MenuAjuda(bool v)
+        private static void MenuAjuda(bool details)
         {
             Console.WriteLine($"Ferramentas de Linha de Comando para remoção de linhas vazias no script do Altitude {buildVersion}{Environment.NewLine}");
-            Console.WriteLine($"Uso dotnet tool:\tAltitudeSpaceRemoving \".\"{Environment.NewLine}\tExemplo:\t\"AltitudeSpaceRemoving .\"");
-            Console.WriteLine($"Uso Runtime:\tdotnet AltitudeSpaceRemoving \".\"{Environment.NewLine}\tExemplo:\t\"AltitudeSpaceRemoving .\"");
+            Console.WriteLine($"Uso dotnet tool:");
+            Console.WriteLine($"\tExecute:\tssrt -d <DIRECTORY>");
+            Console.WriteLine("\tExemplo:\tssrt -d C:\\SCRIPTS");
+            Console.WriteLine($"Diretorio Atual:\tssrt .");
+            
+            
+
         }
     }
 }
