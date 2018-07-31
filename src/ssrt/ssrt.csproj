@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+    <RootNamespace>ssrt</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>Ulisses Cavalcante</Authors>
+    <PackageTags>ssrt</PackageTags>
+    <RepositoryUrl>https://github.com/ucavalcante/ssrt.git</RepositoryUrl>
+    <PackageProjectURL>https://github.com/ucavalcante/ssrt</PackageProjectURL>
+    <PackageLicenseURL>https://github.com/ucavalcante/ssrt/raw/master/LICENSE</PackageLicenseURL>
+    <RepositoryType>git</RepositoryType>
+    <Description>This tool remove some whitespaces insertd unecessary in validation process from script develop.</Description>
+  </PropertyGroup>
+
+</Project>
